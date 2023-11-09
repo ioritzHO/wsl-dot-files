@@ -5,11 +5,11 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
 
-vim.opt.background = dark
+vim.opt.background = [[dark]]
 vim.opt.termguicolors = true
 
 -- Clipboard
-vim.opt.clipboard = unnamed     -- use system clipboard as default clipboard
+vim.opt.clipboard = [[unnamed]] -- use system clipboard as default clipboard
 
 -- Whitespace
 vim.opt.wrap = false            -- don't wrap lines

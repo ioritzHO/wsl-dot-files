@@ -51,5 +51,26 @@ require("lazy").setup(
 
     -- Undo Tree
     { "mbbill/undotree" },
+        
+    -- LspConfig
+    { 
+        "neovim/nvim-lspconfig",
+        config = function() require("ioritz.config.lspconfig") end,
+    },
+
+    -- nvim cmp
+    {
+        "hrsh7th/nvim-cmp",
+        -- load cmp on InsertEnter
+        event = "InsertEnter",
+        dependencies = {
+            "hrsh7th/cmp-nvim-lsp",
+            "hrsh7th/cmp-buffer",
+            "hrsh7th/cmp-path",
+            "hrsh7th/cmp-cmdline",
+        },
+        config = function() require("ioritz.config.cmp") end,
+    },
+
 })
 
